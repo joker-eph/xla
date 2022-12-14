@@ -1991,8 +1991,9 @@ xla_cc_test(
     deps = if_cuda_is_configured([
         ":nvptx_compiler_impl",
         "//xla/tests:hlo_test_base",
+    ]) + [
         "//xla/tests:xla_internal_test_main",  # build_cleaner: keep
-    ]),
+    ],
 )
 
 cc_library(
