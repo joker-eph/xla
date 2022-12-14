@@ -6969,9 +6969,9 @@ xla_cc_test(
 
 xla_cc_binary(
     name = "xla_compile",
-    srcs = if_cuda_is_configured(["xla_compile_main.cc"]),
+    srcs = ["xla_compile_main.cc"],
     visibility = ["//visibility:public"],
-    deps = if_cuda_is_configured([
+    deps = [
         ":compiler",
         "@llvm-project//mlir:ArithDialect",
         "@llvm-project//mlir:FuncDialect",
@@ -6982,14 +6982,15 @@ xla_cc_binary(
         "//xla/pjrt:mlir_to_hlo",
         "//xla/service/cpu:cpu_compiler",
         "//xla/service/cpu:cpu_executable",
-        "//xla/service/gpu:executable_proto_cc",
-        "//xla/service/gpu:gpu_compiler",
         "//xla/service/gpu:nvptx_compiler_impl",
         "@tsl//tsl/platform:env",
         "@tsl//tsl/platform:platform_port",
         "@tsl//tsl/platform:protobuf",
         "@tsl//tsl/util:command_line_flags",
         "@stablehlo//:register",
+    ] + if_cuda_is_configured([
+        "//xla/service/gpu:executable_proto_cc",
+        "//xla/service/gpu:gpu_compiler",
     ]),
 )
 
