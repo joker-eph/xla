@@ -31,7 +31,7 @@ load(
     "if_mkldnn_openmp",
 )
 load(
-    "//third_party/compute_library:build_defs.bzl",
+    "@org_tensorflow//third_party/compute_library:build_defs.bzl",
     "if_enable_acl",
 )
 load("@bazel_skylib//lib:new_sets.bzl", "sets")

@@ -44,7 +44,7 @@ cc_library(
     deps = [
         ":error_windows",
         ":wide_char",
-        "//third_party/eigen3",
+        "@org_tensorflow//third_party/eigen3",
         "//tsl/platform",
         "//tsl/platform:blocking_counter",
         "//tsl/platform:context",

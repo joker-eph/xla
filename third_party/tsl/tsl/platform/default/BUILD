@@ -129,7 +129,7 @@ cc_library(
         "nobuilder",
     ],
     deps = [
-        "//third_party/eigen3",
+        "@org_tensorflow//third_party/eigen3",
         "//tsl/platform",
         "//tsl/platform:blocking_counter",
         "//tsl/platform:context",

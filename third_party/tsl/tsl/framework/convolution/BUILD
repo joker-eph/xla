@@ -50,7 +50,7 @@ cc_library(
     compatible_with = get_compatible_with_portable(),
     defines = ["EIGEN_NEON_GEBP_NR=4"],
     deps = [
-        "//third_party/eigen3",
+        "@org_tensorflow//third_party/eigen3",
         "//tsl/framework/contraction:eigen_contraction_kernel",
         "//tsl/framework/convolution:eigen_convolution_helpers",
         "//tsl/framework/convolution:eigen_spatial_convolutions-inl",

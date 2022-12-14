@@ -44,7 +44,7 @@ cc_library(
         ":exact_uniform_int",
         ":philox_random",
         ":random_distributions_utils",
-        "//third_party/eigen3",
+        "@org_tensorflow//third_party/eigen3",
         "//tsl/platform:logging",
         "//tsl/platform:macros",
         "//tsl/platform:types",
