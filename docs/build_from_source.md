@@ -63,7 +63,7 @@ We recommend using a GPU docker container to build XLA with GPU support, such
 as:
 
 ```
-docker run --name xla_gpu -w /xla -it -d --rm -v $PWD:/xla tensorflow/tensorflow:devel-gpu bash
+docker run --name xla_gpu -w /xla -it -d --rm -v $PWD:/xla tensorflow/tensorflow:latest-gpu bash
 ```
 
 To build XLA with GPU support use the following command:
